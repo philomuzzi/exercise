@@ -6,20 +6,20 @@ const static unsigned int Dimensions = 3;
 
 void multiplyMatrix(const int A[], const int B[], int C[])
 {
-  for (size_t i = 0, j = 0; i < Dimensions && j < Dimensions;) {
-    if (j + 1 % Dimensions == 0) {
-      j = 0;
-      i += 1;
-    } else {
-      j += 1;
-    }
-
+  for (size_t i = 0, j = 0; i < Dimensions;) {
     int value = 0;
     for (size_t k = 0; k < Dimensions; k++) {
       value += A[i * Dimensions + k] * B[j + k * Dimensions];
     }
 
     C[i * Dimensions + j] = value;
+
+    if (j + 1 % Dimensions == 0) {
+      j = 0;
+      i += 1;
+    } else {
+      j += 1;
+    }
   }
 }
 
