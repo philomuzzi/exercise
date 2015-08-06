@@ -2,9 +2,9 @@
 
 using namespace std;
 
-const static int Dimensions = 3;
+const static unsigned int Dimensions = 3;
 
-void multiplyMatrix(const int[] A, const int[] B, int[] C)
+void multiplyMatrix(const int A[], const int B[], int C[])
 {
   for (size_t i = 0, j = 0; i < Dimensions, j < Dimensions;) {
     if (j + 1 % Dimensions == 0) {
@@ -24,9 +24,9 @@ void multiplyMatrix(const int[] A, const int[] B, int[] C)
 }
 
 int int main(int argc, char const *argv[]) {
-  int[] A = {1,2,3,4,5,6,7,8,1};
-  int[] B = {1,2,3,3,2,1,4,5,2};
-  int[9] C;
+  int A[] = {1,2,3,4,5,6,7,8,1};
+  int B[] = {1,2,3,3,2,1,4,5,2};
+  int C[9];
   multiplyMatrix(A, B, C);
   for (int i = 0 ; i < 9; ++i)
     cout << C[i] << endl;
