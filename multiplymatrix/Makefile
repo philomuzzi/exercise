@@ -16,3 +16,6 @@ all: $(OBJS)
 
 clean :
 	rm -rf $(OBJS)
+
+test:
+	$(OBJS)

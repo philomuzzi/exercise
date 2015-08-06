@@ -8,3 +8,6 @@ all:
 
 clean:
 	$(foreach N, $(dirs), make clean -C $(N);)
+
+test:
+	$(foreach N, $(dirs), make test -C $(N);)
