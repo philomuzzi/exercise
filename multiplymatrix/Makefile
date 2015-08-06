@@ -18,4 +18,4 @@ clean :
 	rm -rf $(OBJS)
 
 test:
-	$(OBJS)
+	./$(OBJS)
