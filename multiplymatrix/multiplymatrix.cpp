@@ -14,7 +14,7 @@ void multiplyMatrix(const int A[], const int B[], int C[])
 
     C[i * Dimensions + j] = value;
 
-    if (j + 1 % Dimensions == 0) {
+    if ((j + 1) % Dimensions == 0) {
       j = 0;
       i += 1;
     } else {
